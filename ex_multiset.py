@@ -74,10 +74,13 @@ class MultiSet(object):
             if element e has multiplicity > 1
 
         """
-        
+        memb=self.list.count(e)
+        if memb >= 1:
+            return True
+        else:
+            return False
       
-
-     
+           
         pass
 
     def union(self, ms):
