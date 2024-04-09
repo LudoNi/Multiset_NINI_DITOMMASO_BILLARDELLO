@@ -99,7 +99,13 @@ class MultiSet(object):
             the union between the object and ms
         """
        
-   
+        union= copy(self.list)
+        for el in ms.list:
+            union.append(el)
+            
+        union.sort()
+        
+        return MultiSet(union)
         
         pass
 
