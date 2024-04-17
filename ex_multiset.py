@@ -124,7 +124,15 @@ class MultiSet(object):
         new_ms : Multiset
             the intersection between the object and ms
         """
-   
+        intersection = []
+        ms_copy = copy(ms)
+        for element in self.list:
+            if element in ms_copy.list:
+                intersection.append(element)
+                ms_copy.list.remove(element)
+
+        intersection.sort()
+        return MultiSet(intersection)
     
         pass
 
