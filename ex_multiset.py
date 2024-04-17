@@ -17,7 +17,6 @@ class MultiSet(object):
         self.list=elems
         self.list.sort()
      
-        pass
 
     def add(self, e):
         """
@@ -38,7 +37,6 @@ class MultiSet(object):
         self.list.sort()
         #self.list=self.list.append(e)
 
-        pass
 
     def remove(self, e):
         """
@@ -56,7 +54,6 @@ class MultiSet(object):
         """
         self.list.remove(e)
 
-        pass
     
 
     def membership_test(self, e):
@@ -80,8 +77,6 @@ class MultiSet(object):
         else:
             return False
       
-           
-        pass
 
     def union(self, ms):
         """
@@ -106,8 +101,6 @@ class MultiSet(object):
         union.sort()
         
         return MultiSet(union)
-        
-        pass
 
     def intersection(self, ms):
         """
@@ -133,8 +126,7 @@ class MultiSet(object):
 
         intersection.sort()
         return MultiSet(intersection)
-    
-        pass
+
 
     def difference(self,ms):
         """
@@ -153,7 +145,7 @@ class MultiSet(object):
         """
         
         diff=[]
-        ms_copy=deepcopy(ms)
+        ms_copy=copy(ms)
         for element in self.list:
             if element not in ms_copy.list:
                 diff.append(element)
@@ -162,7 +154,6 @@ class MultiSet(object):
                 
         diff.sort()                                
         return MultiSet(diff)
-        pass
 
 
 if __name__ == "__main__":
